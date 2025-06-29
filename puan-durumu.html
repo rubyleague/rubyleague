@@ -211,9 +211,19 @@
             background-color: #f1f1f1;
         }
 
+        /* Takım adı ve logo için yeni CSS */
         .standings-table .team-name {
+            display: flex; /* Logo ve takım adını yan yana hizalamak için */
+            align-items: center; /* Dikeyde ortalamak için */
             font-weight: 600;
             color: var(--dark-color);
+        }
+
+        .standings-table .team-logo {
+            width: 30px;  /* Logonun genişliği */
+            height: 30px; /* Logonun yüksekliği */
+            margin-right: 10px; /* Logo ile takım adı arasına boşluk bırakmak için */
+            object-fit: contain; /* Görselin oranını koruyarak kutuya sığdır */
         }
 
         .standings-table .points {
@@ -256,18 +266,23 @@
                 font-weight: 600;
                 color: var(--primary-color);
             }
+
+            /* Küçük ekranlarda logo boyutu */
+            .standings-table .team-logo {
+                width: 25px;
+                height: 25px;
+            }
         }
 
         /* Dropdown menü için özel CSS */
         .dropdown {
             position: relative;
-            /* display: inline-block; */ /* Bu kaldırıldı, nav-container'ın flex yapısı yeterli */
-            display: flex; /* İçindeki nav-link'i ortalamak için */
-            align-items: center; /* İçindeki nav-link'i dikeyde ortalamak için */
+            display: flex;
+            align-items: center;
         }
 
         .dropdown-content {
-            display: block; /* Animasyon için display: none yerine block kullanıyoruz */
+            display: block;
             position: absolute;
             background-color: var(--dark-color);
             min-width: 160px;
@@ -278,21 +293,20 @@
             border-radius: 0 0 5px 5px;
             overflow: hidden; 
 
-            /* Animasyon için eklenenler */
-            opacity: 0; /* Başlangıçta tamamen şeffaf */
-            visibility: hidden; /* Başlangıçta etkileşimi engelle */
-            transform: translateY(-10px); /* Hafif yukarıda başla */
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease; /* Geçiş efektleri */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
         }
 
         .dropdown-content a {
             color: white;
-            padding: 0.75rem 1.5rem; /* nav-link ile aynı padding */
+            padding: 0.75rem 1.5rem;
             text-decoration: none;
             display: block;
             text-align: left;
             transition: background-color 0.3s ease;
-            font-weight: 500; /* nav-link ile aynı font-weight */
+            font-weight: 500;
         }
 
         .dropdown-content a:hover {
@@ -300,12 +314,11 @@
         }
 
         .dropdown:hover .dropdown-content {
-            opacity: 1; /* Üzerine gelindiğinde görünür yap */
-            visibility: visible; /* Üzerine gelindiğinde etkileşime izin ver */
-            transform: translateY(0); /* Orijinal konumuna getir */
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
 
-        /* İstatistikler nav-link'inin alt çizgisini dropdown açıldığında da korumak için */
         .dropdown:hover .nav-link::after {
             width: 80%;
             background-color: white;
@@ -326,7 +339,6 @@
             <a href="index.html" class="nav-link">Ana Sayfa</a>
             <a href="puan-durumu.html" class="nav-link active">Puan Durumu</a>
             <div class="dropdown">
-                <!-- href özelliği kaldırıldı -->
                 <a class="nav-link">İstatistikler</a>
                 <div class="dropdown-content">
                     <a href="gol-kralligi.html">Gol Krallığı</a>
@@ -377,10 +389,14 @@
 	<script>
 document.addEventListener('DOMContentLoaded', () => {
     const standingsBody = document.getElementById('standings-body');
+
     fetch('standings.json')
         .then(response => response.json())
         .then(data => {
+            // Verileri puanlarına göre büyükten küçüğe sırala
             data.sort((a, b) => b.puan - a.puan);
+
+            // Her takım için tablo satırı oluşturma
             data.forEach((team, index) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
