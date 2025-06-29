@@ -326,7 +326,8 @@
             <a href="index.html" class="nav-link">Ana Sayfa</a>
             <a href="puan-durumu.html" class="nav-link active">Puan Durumu</a>
             <div class="dropdown">
-                <a href="istatistikler.html" class="nav-link">İstatistikler</a>
+                <!-- href özelliği kaldırıldı -->
+                <a class="nav-link">İstatistikler</a>
                 <div class="dropdown-content">
                     <a href="gol-kralligi.html">Gol Krallığı</a>
                     <a href="asist-kralligi.html">Asist Krallığı</a>
@@ -355,157 +356,13 @@
                         <th>Puan</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Tüm takım isimleri boş bırakıldı ve tüm değerler sıfır olarak ayarlandı -->
-                    <tr>
-                        <td data-label="Sıra">1</td>
-                        <td data-label="Takım" class="team-name">AC Milan</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">4</td>
-                        <td data-label="Beraberlik">1</td>
-                        <td data-label="Mağlubiyet">0</td>
-                        <td data-label="Atılan Gol">12</td>
-                        <td data-label="Yenilen Gol">0</td>
-                        <td data-label="Averaj">+12</td>
-                        <td data-label="Puan" class="points">13</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">2</td>
-                        <td data-label="Takım" class="team-name">Real Madrid</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">4</td>
-                        <td data-label="Beraberlik">1</td>
-                        <td data-label="Mağlubiyet">0</td>
-                        <td data-label="Atılan Gol">10</td>
-                        <td data-label="Yenilen Gol">1</td>
-                        <td data-label="Averaj">+9</td>
-                        <td data-label="Puan" class="points">13</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">3</td>
-                        <td data-label="Takım" class="team-name">Manchester City</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">3</td>
-                        <td data-label="Beraberlik">2</td>
-                        <td data-label="Mağlubiyet">0</td>
-                        <td data-label="Atılan Gol">11</td>
-                        <td data-label="Yenilen Gol">2</td>
-                        <td data-label="Averaj">+9</td>
-                        <td data-label="Puan" class="points">11</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">4</td>
-                        <td data-label="Takım" class="team-name">Arsenal</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">3</td>
-                        <td data-label="Beraberlik">2</td>
-                        <td data-label="Mağlubiyet">0</td>
-                        <td data-label="Atılan Gol">9</td>
-                        <td data-label="Yenilen Gol">1</td>
-                        <td data-label="Averaj">+8</td>
-                        <td data-label="Puan" class="points">11</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">5</td>
-                        <td data-label="Takım" class="team-name">Bayern Münih</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">3</td>
-                        <td data-label="Beraberlik">1</td>
-                        <td data-label="Mağlubiyet">1</td>
-                        <td data-label="Atılan Gol">8</td>
-                        <td data-label="Yenilen Gol">4</td>
-                        <td data-label="Averaj">+4</td>
-                        <td data-label="Puan" class="points">10</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">6</td>
-                        <td data-label="Takım" class="team-name">Liverpool</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">2</td>
-                        <td data-label="Beraberlik">1</td>
-                        <td data-label="Mağlubiyet">2</td>
-                        <td data-label="Atılan Gol">7</td>
-                        <td data-label="Yenilen Gol">4</td>
-                        <td data-label="Averaj">+3</td>
-                        <td data-label="Puan" class="points">7</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">7</td>
-                        <td data-label="Takım" class="team-name">Barcelona</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">2</td>
-                        <td data-label="Beraberlik">0</td>
-                        <td data-label="Mağlubiyet">3</td>
-                        <td data-label="Atılan Gol">4</td>
-                        <td data-label="Yenilen Gol">4</td>
-                        <td data-label="Averaj">0</td>
-                        <td data-label="Puan" class="points">6</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">8</td>
-                        <td data-label="Takım" class="team-name">Chelsea</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">0</td>
-                        <td data-label="Beraberlik">3</td>
-                        <td data-label="Mağlubiyet">2</td>
-                        <td data-label="Atılan Gol">0</td>
-                        <td data-label="Yenilen Gol">6</td>
-                        <td data-label="Averaj">-6</td>
-                        <td data-label="Puan" class="points">0</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">9</td>
-                        <td data-label="Takım" class="team-name">Lille</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">1</td>
-                        <td data-label="Beraberlik">0</td>
-                        <td data-label="Mağlubiyet">4</td>
-                        <td data-label="Atılan Gol">3</td>
-                        <td data-label="Yenilen Gol">12</td>
-                        <td data-label="Averaj">-9</td>
-                        <td data-label="Puan" class="points">3</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">10</td>
-                        <td data-label="Takım" class="team-name">Leverkusen</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">0</td>
-                        <td data-label="Beraberlik">2</td>
-                        <td data-label="Mağlubiyet">3</td>
-                        <td data-label="Atılan Gol">0</td>
-                        <td data-label="Yenilen Gol">9</td>
-                        <td data-label="Averaj">-9</td>
-                        <td data-label="Puan" class="points">2</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">11</td>
-                        <td data-label="Takım" class="team-name">Lazio</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">0</td>
-                        <td data-label="Beraberlik">2</td>
-                        <td data-label="Mağlubiyet">3</td>
-                        <td data-label="Atılan Gol">0</td>
-                        <td data-label="Yenilen Gol">9</td>
-                        <td data-label="Averaj">-9</td>
-                        <td data-label="Puan" class="points">2</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">12</td>
-                        <td data-label="Takım" class="team-name">Manchester United</td>
-                        <td data-label="Oynanan">5</td>
-                        <td data-label="Galibiyet">0</td>
-                        <td data-label="Beraberlik">1</td>
-                        <td data-label="Mağlubiyet">4</td>
-                        <td data-label="Atılan Gol">0</td>
-                        <td data-label="Yenilen Gol">12</td>
-                        <td data-label="Averaj">-12</td>
-                        <td data-label="Puan" class="points">1</td>
-                    </tr>
+                <tbody id="standings-body">
+                    <!-- Bu kısım JavaScript tarafından doldurulacak -->
                 </tbody>
             </table>
         </section>
     </main>
-    
+      
     <footer class="footer">
         <img class="footer-logo" src="https://placehold.co/200x80/FFFFFF/1a3e8c/png?text=Futbol+Ligi" alt="Futbol Ligi Resmi Logosu - Beyaz arka plan üzerinde mavi futbol topu ve lig adı">
         
@@ -514,7 +371,44 @@
             <a href="#" class="footer-link">Kurallar</a>
             <a href="#" class="footer-link">İletişim</a>
         </div>
-        <p class="copyright">&copy; 2023 Ruby League. Tüm Hakları Saklıdır.</p>
+        <p class="copyright">&copy; © 2025 Ruby League. Tüm hakları saklıdır.</p>
     </footer>
+	
+	<script>
+            document.addEventListener('DOMContentLoaded', () => {
+        const standingsBody = document.getElementById('standings-body');
+
+        // JSON dosyasını çekme
+        fetch('standings.json')
+            .then(response => response.json())
+            .then(data => {
+                // Verileri puanlarına göre büyükten küçüğe sırala
+                data.sort((a, b) => b.puan - a.puan);
+
+                // Her takım için tablo satırı oluşturma
+                data.forEach((team, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td data-label="Sıra">${index + 1}</td>
+                        <td data-label="Takım" class="team-name">${team.takim}</td>
+                        <td data-label="Oynanan">${team.oynanan}</td>
+                        <td data-label="Galibiyet">${team.galibiyet}</td>
+                        <td data-label="Beraberlik">${team.beraberlik}</td>
+                        <td data-label="Mağlubiyet">${team.maglubiyet}</td>
+                        <td data-label="Atılan Gol">${team.atilanGol}</td>
+                        <td data-label="Yenilen Gol">${team.yenilenGol}</td>
+                        <td data-label="Averaj">${team.averaj}</td>
+                        <td data-label="Puan" class="points">${team.puan}</td>
+                    `;
+                    standingsBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Puan durumu verileri yüklenirken bir hata oluştu:', error);
+                standingsBody.innerHTML = '<tr><td colspan="10">Puan durumu yüklenemedi. Lütfen daha sonra tekrar deneyin.</td></tr>';
+            });
+    });
+    </script>
+	
 </body>
 </html>
