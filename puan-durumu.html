@@ -375,39 +375,37 @@
     </footer>
 	
 	<script>
-            document.addEventListener('DOMContentLoaded', () => {
-        const standingsBody = document.getElementById('standings-body');
-
-        // JSON dosyasını çekme
-        fetch('standings.json')
-            .then(response => response.json())
-            .then(data => {
-                // Verileri puanlarına göre büyükten küçüğe sırala
-                data.sort((a, b) => b.puan - a.puan);
-
-                // Her takım için tablo satırı oluşturma
-                data.forEach((team, index) => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td data-label="Sıra">${index + 1}</td>
-                        <td data-label="Takım" class="team-name">${team.takim}</td>
-                        <td data-label="Oynanan">${team.oynanan}</td>
-                        <td data-label="Galibiyet">${team.galibiyet}</td>
-                        <td data-label="Beraberlik">${team.beraberlik}</td>
-                        <td data-label="Mağlubiyet">${team.maglubiyet}</td>
-                        <td data-label="Atılan Gol">${team.atilanGol}</td>
-                        <td data-label="Yenilen Gol">${team.yenilenGol}</td>
-                        <td data-label="Averaj">${team.averaj}</td>
-                        <td data-label="Puan" class="points">${team.puan}</td>
-                    `;
-                    standingsBody.appendChild(row);
-                });
-            })
-            .catch(error => {
-                console.error('Puan durumu verileri yüklenirken bir hata oluştu:', error);
-                standingsBody.innerHTML = '<tr><td colspan="10">Puan durumu yüklenemedi. Lütfen daha sonra tekrar deneyin.</td></tr>';
+document.addEventListener('DOMContentLoaded', () => {
+    const standingsBody = document.getElementById('standings-body');
+    fetch('standings.json')
+        .then(response => response.json())
+        .then(data => {
+            data.sort((a, b) => b.puan - a.puan);
+            data.forEach((team, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td data-label="Sıra">${index + 1}</td>
+                    <td data-label="Takım" class="team-name">
+                        <img src="images/team_logos/${team.logo}" alt="${team.takim} Logo" class="team-logo">
+                        ${team.takim}
+                    </td>
+                    <td data-label="Oynanan">${team.oynanan}</td>
+                    <td data-label="Galibiyet">${team.galibiyet}</td>
+                    <td data-label="Beraberlik">${team.beraberlik}</td>
+                    <td data-label="Mağlubiyet">${team.maglubiyet}</td>
+                    <td data-label="Atılan Gol">${team.atilanGol}</td>
+                    <td data-label="Yenilen Gol">${team.yenilenGol}</td>
+                    <td data-label="Averaj">${team.averaj}</td>
+                    <td data-label="Puan" class="points">${team.puan}</td>
+                `;
+                standingsBody.appendChild(row);
             });
-    });
+        })
+        .catch(error => {
+            console.error('Puan durumu verileri yüklenirken bir hata oluştu:', error);
+            standingsBody.innerHTML = '<tr><td colspan="10">Puan durumu yüklenemedi. Lütfen daha sonra tekrar deneyin.</td></tr>';
+        });
+});
     </script>
 	
 </body>
