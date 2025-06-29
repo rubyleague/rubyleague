@@ -26,13 +26,13 @@
         {
             "sira": 3,
             "takim": "Manchester City",
-            "oynanan": 5,
+            "oynanan": 6,
             "galibiyet": 3,
             "beraberlik": 2,
-            "maglubiyet": 0,
+            "maglubiyet": 1,
             "atilanGol": 11,
-            "yenilenGol": 2,
-            "averaj": "+9",
+            "yenilenGol": 5,
+            "averaj": "+6",
             "puan": 11
         },
         {
@@ -74,14 +74,14 @@
         {
             "sira": 7,
             "takim": "Barcelona",
-            "oynanan": 5,
-            "galibiyet": 2,
+            "oynanan": 6,
+            "galibiyet": 3,
             "beraberlik": 0,
             "maglubiyet": 3,
-            "atilanGol": 4,
+            "atilanGol": 7,
             "yenilenGol": 4,
-            "averaj": "0",
-            "puan": 6
+            "averaj": "+3",
+            "puan": 9
         },
         {
             "sira": 8,
@@ -122,25 +122,25 @@
         {
             "sira": 11,
             "takim": "Lazio",
-            "oynanan": 5,
+            "oynanan": 6,
             "galibiyet": 0,
             "beraberlik": 2,
-            "maglubiyet": 3,
+            "maglubiyet": 4,
             "atilanGol": 0,
-            "yenilenGol": 9,
-            "averaj": "-9",
+            "yenilenGol": 12,
+            "averaj": "-12",
             "puan": 2
         },
         {
             "sira": 12,
             "takim": "Manchester United",
-            "oynanan": 5,
+            "oynanan": 6,
             "galibiyet": 0,
             "beraberlik": 1,
-            "maglubiyet": 4,
-            "atilanGol": 0,
-            "yenilenGol": 12,
-            "averaj": "-12",
+            "maglubiyet": 5,
+            "atilanGol": 1,
+            "yenilenGol": 16,
+            "averaj": "-15",
             "puan": 1
         }
     ]
