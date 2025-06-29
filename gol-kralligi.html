@@ -350,67 +350,8 @@
                         <th>Gol</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Sıra">1</td>
-                        <td data-label="Oyuncu" class="player-name">Lionel Messi</td>
-                        <td data-label="Takım" class="team-name">Barcelona</td>
-                        <td data-label="Gol" class="stat-value">7</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">2</td>
-                        <td data-label="Oyuncu" class="player-name">Cristiano Ronaldo</td>
-                        <td data-label="Takım" class="team-name">Real Madrid</td>
-                        <td data-label="Gol" class="stat-value">6</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">3</td>
-                        <td data-label="Oyuncu" class="player-name">Robert Lewandowski</td>
-                        <td data-label="Takım" class="team-name">Bayern Münih</td>
-                        <td data-label="Gol" class="stat-value">5</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">4</td>
-                        <td data-label="Oyuncu" class="player-name">Erling Haaland</td>
-                        <td data-label="Takım" class="team-name">Manchester City</td>
-                        <td data-label="Gol" class="stat-value">5</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">5</td>
-                        <td data-label="Oyuncu" class="player-name">Kylian Mbappé</td>
-                        <td data-label="Takım" class="team-name">Lille</td>
-                        <td data-label="Gol" class="stat-value">4</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">6</td>
-                        <td data-label="Oyuncu" class="player-name">Mohamed Salah</td>
-                        <td data-label="Takım" class="team-name">Liverpool</td>
-                        <td data-label="Gol" class="stat-value">4</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">7</td>
-                        <td data-label="Oyuncu" class="player-name">Karim Benzema</td>
-                        <td data-label="Takım" class="team-name">Real Madrid</td>
-                        <td data-label="Gol" class="stat-value">3</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">8</td>
-                        <td data-label="Oyuncu" class="player-name">Harry Kane</td>
-                        <td data-label="Takım" class="team-name">Manchester United</td>
-                        <td data-label="Gol" class="stat-value">3</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">9</td>
-                        <td data-label="Oyuncu" class="player-name">Kevin De Bruyne</td>
-                        <td data-label="Takım" class="team-name">Manchester City</td>
-                        <td data-label="Gol" class="stat-value">2</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">10</td>
-                        <td data-label="Oyuncu" class="player-name">Bruno Fernandes</td>
-                        <td data-label="Takım" class="team-name">Manchester United</td>
-                        <td data-label="Gol" class="stat-value">2</td>
-                    </tr>
+                <tbody id="top-scorers-body">
+                    <!-- Bu kısım JavaScript tarafından doldurulacak -->
                 </tbody>
             </table>
         </section>
@@ -424,7 +365,41 @@
             <a href="#" class="footer-link">Kurallar</a>
             <a href="#" class="footer-link">İletişim</a>
         </div>
-        <p class="copyright">&copy; 2023 Ruby League. Tüm Hakları Saklıdır.</p>
+        <p class="copyright">&copy; 2025 Ruby League. Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const topScorersBody = document.getElementById('top-scorers-body');
+
+            fetch('top_scorers.json') // top_scorers.json dosyasını çekiyoruz
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Verileri gol sayılarına göre büyükten küçüğe sırala
+                    data.sort((a, b) => b.gol - a.gol);
+
+                    // Her oyuncu için tablo satırı oluşturma
+                    data.forEach((player, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td data-label="Sıra">${index + 1}</td>
+                            <td data-label="Oyuncu" class="player-name">${player.oyuncu}</td>
+                            <td data-label="Takım" class="team-name">${player.takim}</td>
+                            <td data-label="Gol" class="stat-value">${player.gol}</td>
+                        `;
+                        topScorersBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Gol krallığı verileri yüklenirken bir hata oluştu:', error);
+                    topScorersBody.innerHTML = '<tr><td colspan="4">Gol krallığı yüklenemedi. Lütfen daha sonra tekrar deneyin.</td></tr>';
+                });
+        });
+    </script>
 </body>
 </html>

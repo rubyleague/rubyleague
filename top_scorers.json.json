@@ -1,0 +1,62 @@
+[
+    {
+        "sira": 1,
+        "oyuncu": "Lionel Messi",
+        "takim": "Barcelona",
+        "gol": 7
+    },
+    {
+        "sira": 2,
+        "oyuncu": "Cristiano Ronaldo",
+        "takim": "Real Madrid",
+        "gol": 6
+    },
+    {
+        "sira": 3,
+        "oyuncu": "Robert Lewandowski",
+        "takim": "Bayern Münih",
+        "gol": 5
+    },
+    {
+        "sira": 4,
+        "oyuncu": "Erling Haaland",
+        "takim": "Manchester City",
+        "gol": 5
+    },
+    {
+        "sira": 5,
+        "oyuncu": "Kylian Mbappé",
+        "takim": "Lille",
+        "gol": 4
+    },
+    {
+        "sira": 6,
+        "oyuncu": "Mohamed Salah",
+        "takim": "Liverpool",
+        "gol": 4
+    },
+    {
+        "sira": 7,
+        "oyuncu": "Karim Benzema",
+        "takim": "Real Madrid",
+        "gol": 3
+    },
+    {
+        "sira": 8,
+        "oyuncu": "Harry Kane",
+        "takim": "Manchester United",
+        "gol": 3
+    },
+    {
+        "sira": 9,
+        "oyuncu": "Kevin De Bruyne",
+        "takim": "Manchester City",
+        "gol": 2
+    },
+    {
+        "sira": 10,
+        "oyuncu": "Bruno Fernandes",
+        "takim": "Manchester United",
+        "gol": 2
+    }
+]
