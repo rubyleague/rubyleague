@@ -216,6 +216,18 @@
             color: var(--dark-color);
         }
 
+        .stats-table .team-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .stats-table .team-logo {
+            height: 24px; /* Logo boyutu */
+            width: 24px;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+
         .stats-table .team-name {
             color: #555;
             font-size: 0.9rem;
@@ -389,7 +401,10 @@
                         row.innerHTML = `
                             <td data-label="Sıra">${index + 1}</td>
                             <td data-label="Oyuncu" class="player-name">${player.oyuncu}</td>
-                            <td data-label="Takım" class="team-name">${player.takim}</td>
+                            <td data-label="Takım" class="team-info">
+                                <img src="${player.takim.logo}" alt="${player.takim.isim} Logo" class="team-logo">
+                                <span class="team-name">${player.takim.isim}</span>
+                            </td>
                             <td data-label="Gol" class="stat-value">${player.gol}</td>
                         `;
                         topScorersBody.appendChild(row);

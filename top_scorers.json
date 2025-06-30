@@ -4,7 +4,7 @@
         "oyuncu": "Kylian Mbappé",
         "takim": {
             "isim": "Arsenal",
-            "logo": "link_to_arsenal_logo"
+            "logo": "images/team_logos/arsenal.png"
         },
         "gol": 3
     },
@@ -13,7 +13,7 @@
         "oyuncu": "Paul Onuachu",
         "takim": {
             "isim": "Bayern Münih",
-            "logo": "link_to_bayern_logo"
+            "logo": "images/team_logos/bayern_munih.png"
         },
         "gol": 2
     },
@@ -22,7 +22,7 @@
         "oyuncu": "Neymar Junior",
         "takim": {
             "isim": "AC Milan",
-            "logo": "images/team_logos/ac_milan"
+            "logo": "images/team_logos/ac_milan.png"
         },
         "gol": 2
     }
