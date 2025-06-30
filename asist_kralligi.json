@@ -1,54 +1,6 @@
 [
     {
-        "oyuncu": "Kevin De Bruyne",
-        "takim": {
-            "isim": "Manchester City",
-            "logo": "images/team_logos/man_city.png"
-        },
-        "asist": 6
-    },
-    {
-        "oyuncu": "Lionel Messi",
-        "takim": {
-            "isim": "Barcelona",
-            "logo": "images/team_logos/barcelona.png"
-        },
-        "asist": 5
-    },
-    {
-        "oyuncu": "Bruno Fernandes",
-        "takim": {
-            "isim": "Manchester United",
-            "logo": "images/team_logos/man_united.png"
-        },
-        "asist": 4
-    },
-    {
-        "oyuncu": "Trent Alexander-Arnold",
-        "takim": {
-            "isim": "Liverpool",
-            "logo": "images/team_logos/liverpool.png"
-        },
-        "asist": 4
-    },
-    {
-        "oyuncu": "Thomas Müller",
-        "takim": {
-            "isim": "Bayern Münih",
-            "logo": "images/team_logos/bayern_munih.png"
-        },
-        "asist": 3
-    },
-    {
-        "oyuncu": "Vinicius Jr.",
-        "takim": {
-            "isim": "Real Madrid",
-            "logo": "images/team_logos/real_madrid.png"
-        },
-        "asist": 3
-    },
-    {
-        "oyuncu": "Bukayo Saka",
+        "oyuncu": "Alvaro Morata",
         "takim": {
             "isim": "Arsenal",
             "logo": "images/team_logos/arsenal.png"
@@ -56,27 +8,35 @@
         "asist": 2
     },
     {
-        "oyuncu": "Federico Chiesa",
+        "oyuncu": "Emiliano Martinez",
         "takim": {
-            "isim": "AC Milan",
-            "logo": "images/team_logos/ac_milan.png"
+            "isim": "Real Madrid",
+            "logo": "images/team_logos/real_madrid.png"
         },
         "asist": 2
     },
     {
-        "oyuncu": "Neymar Jr.",
+        "oyuncu": "Eberechi Eze",
         "takim": {
-            "isim": "Lille",
-            "logo": "images/team_logos/lille.png"
+            "isim": "Arsenal",
+            "logo": "images/team_logos/arsenal.png"
         },
         "asist": 1
     },
     {
-        "oyuncu": "Kai Havertz",
+        "oyuncu": "Kylian Mbappe",
         "takim": {
-            "isim": "Chelsea",
-            "logo": "images/team_logos/chelsea.png"
+            "isim": "Arsenal",
+            "logo": "images/team_logos/arsenal.png"
         },
         "asist": 1
+    },
+    {
+        "oyuncu": "Diego Costa",
+        "takim": {
+            "isim": "Bayern Münih",
+            "logo": "images/team_logos/bayern_munih.png"
+        },
+        "asist": 3
     }
 ]
