@@ -1,0 +1,82 @@
+[
+    {
+        "oyuncu": "Thibaut Courtois",
+        "takim": {
+            "isim": "Real Madrid",
+            "logo": "images/team_logos/real_madrid.png"
+        },
+        "kurtaris": 30
+    },
+    {
+        "oyuncu": "Alisson Becker",
+        "takim": {
+            "isim": "Liverpool",
+            "logo": "images/team_logos/liverpool.png"
+        },
+        "kurtaris": 28
+    },
+    {
+        "oyuncu": "Manuel Neuer",
+        "takim": {
+            "isim": "Bayern Münih",
+            "logo": "images/team_logos/bayern_munih.png"
+        },
+        "kurtaris": 25
+    },
+    {
+        "oyuncu": "Ederson",
+        "takim": {
+            "isim": "Manchester City",
+            "logo": "images/team_logos/man_city.png"
+        },
+        "kurtaris": 23
+    },
+    {
+        "oyuncu": "Gianluigi Donnarumma",
+        "takim": {
+            "isim": "AC Milan",
+            "logo": "images/team_logos/ac_milan.png"
+        },
+        "kurtaris": 20
+    },
+    {
+        "oyuncu": "Marc-André ter Stegen",
+        "takim": {
+            "isim": "Barcelona",
+            "logo": "images/team_logos/barcelona.png"
+        },
+        "kurtaris": 18
+    },
+    {
+        "oyuncu": "Kepa Arrizabalaga",
+        "takim": {
+            "isim": "Chelsea",
+            "logo": "images/team_logos/chelsea.png"
+        },
+        "kurtaris": 15
+    },
+    {
+        "oyuncu": "Bernd Leno",
+        "takim": {
+            "isim": "Arsenal",
+            "logo": "images/team_logos/arsenal.png"
+        },
+        "kurtaris": 14
+    },
+    {
+        "oyuncu": "Mike Maignan",
+        "takim": {
+            "isim": "Lille",
+            "logo": "images/team_logos/lille.png"
+        },
+        "kurtaris": 12
+    },
+    {
+        "oyuncu": "Lukáš Hrádecký",
+        "takim": {
+            "isim": "Leverkusen",
+            "logo": "images/team_logos/leverkusen.png"
+        },
+        "kurtaris": 10
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "oyuncu": "N'Golo Kanté",
+        "takim": {
+            "isim": "Chelsea",
+            "logo": "images/team_logos/chelsea.png"
+        },
+        "mudahale": 25
+    },
+    {
+        "oyuncu": "Casemiro",
+        "takim": {
+            "isim": "Real Madrid",
+            "logo": "images/team_logos/real_madrid.png"
+        },
+        "mudahale": 22
+    },
+    {
+        "oyuncu": "Fabinho",
+        "takim": {
+            "isim": "Liverpool",
+            "logo": "images/team_logos/liverpool.png"
+        },
+        "mudahale": 20
+    },
+    {
+        "oyuncu": "Joshua Kimmich",
+        "takim": {
+            "isim": "Bayern Münih",
+            "logo": "images/team_logos/bayern_munih.png"
+        },
+        "mudahale": 18
+    },
+    {
+        "oyuncu": "Rodri",
+        "takim": {
+            "isim": "Manchester City",
+            "logo": "images/team_logos/man_city.png"
+        },
+        "mudahale": 17
+    },
+    {
+        "oyuncu": "Declan Rice",
+        "takim": {
+            "isim": "Arsenal",
+            "logo": "images/team_logos/arsenal.png"
+        },
+        "mudahale": 16
+    },
+    {
+        "oyuncu": "Franck Kessié",
+        "takim": {
+            "isim": "AC Milan",
+            "logo": "images/team_logos/ac_milan.png"
+        },
+        "mudahale": 15
+    },
+    {
+        "oyuncu": "Jorginho",
+        "takim": {
+            "isim": "Chelsea",
+            "logo": "images/team_logos/chelsea.png"
+        },
+        "mudahale": 14
+    },
+    {
+        "oyuncu": "Marcelo Brozović",
+        "takim": {
+            "isim": "Lazio",
+            "logo": "images/team_logos/lazio.png"
+        },
+        "mudahale": 13
+    },
+    {
+        "oyuncu": "Youri Tielemans",
+        "takim": {
+            "isim": "Leverkusen",
+            "logo": "images/team_logos/leverkusen.png"
+        },
+        "mudahale": 12
+    }
+]

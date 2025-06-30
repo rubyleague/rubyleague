@@ -216,6 +216,18 @@
             color: var(--dark-color);
         }
 
+        .stats-table .team-info { /* Added for team logo and name alignment */
+            display: flex;
+            align-items: center;
+        }
+
+        .stats-table .team-logo { /* Added for team logo styling */
+            height: 24px;
+            width: 24px;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+
         .stats-table .team-name {
             color: #555;
             font-size: 0.9rem;
@@ -350,67 +362,8 @@
                         <th>Kurtarış</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Sıra">1</td>
-                        <td data-label="Oyuncu" class="player-name">Thibaut Courtois</td>
-                        <td data-label="Takım" class="team-name">Real Madrid</td>
-                        <td data-label="Kurtarış" class="stat-value">30</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">2</td>
-                        <td data-label="Oyuncu" class="player-name">Alisson Becker</td>
-                        <td data-label="Takım" class="team-name">Liverpool</td>
-                        <td data-label="Kurtarış" class="stat-value">28</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">3</td>
-                        <td data-label="Oyuncu" class="player-name">Manuel Neuer</td>
-                        <td data-label="Takım" class="team-name">Bayern Münih</td>
-                        <td data-label="Kurtarış" class="stat-value">25</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">4</td>
-                        <td data-label="Oyuncu" class="player-name">Ederson</td>
-                        <td data-label="Takım" class="team-name">Manchester City</td>
-                        <td data-label="Kurtarış" class="stat-value">23</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">5</td>
-                        <td data-label="Oyuncu" class="player-name">Gianluigi Donnarumma</td>
-                        <td data-label="Takım" class="team-name">AC Milan</td>
-                        <td data-label="Kurtarış" class="stat-value">20</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">6</td>
-                        <td data-label="Oyuncu" class="player-name">Marc-André ter Stegen</td>
-                        <td data-label="Takım" class="team-name">Barcelona</td>
-                        <td data-label="Kurtarış" class="stat-value">18</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">7</td>
-                        <td data-label="Oyuncu" class="player-name">Kepa Arrizabalaga</td>
-                        <td data-label="Takım" class="team-name">Chelsea</td>
-                        <td data-label="Kurtarış" class="stat-value">15</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">8</td>
-                        <td data-label="Oyuncu" class="player-name">Bernd Leno</td>
-                        <td data-label="Takım" class="team-name">Arsenal</td>
-                        <td data-label="Kurtarış" class="stat-value">14</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">9</td>
-                        <td data-label="Oyuncu" class="player-name">Mike Maignan</td>
-                        <td data-label="Takım" class="team-name">Lille</td>
-                        <td data-label="Kurtarış" class="stat-value">12</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Sıra">10</td>
-                        <td data-label="Oyuncu" class="player-name">Lukáš Hrádecký</td>
-                        <td data-label="Takım" class="team-name">Leverkusen</td>
-                        <td data-label="Kurtarış" class="stat-value">10</td>
-                    </tr>
+                <tbody id="stats-body">
+                    <!-- Bu kısım JavaScript tarafından doldurulacak -->
                 </tbody>
             </table>
         </section>
@@ -426,5 +379,40 @@
         </div>
         <p class="copyright">&copy; 2023 Ruby League. Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsBody = document.getElementById('stats-body');
+
+            fetch('kurtaris_sayilari.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    data.sort((a, b) => b.kurtaris - a.kurtaris); // Kurtarış sayısına göre sırala
+
+                    data.forEach((player, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td data-label="Sıra">${index + 1}</td>
+                            <td data-label="Oyuncu" class="player-name">${player.oyuncu}</td>
+                            <td data-label="Takım" class="team-info">
+                                <img src="${player.takim.logo}" alt="${player.takim.isim} Logo" class="team-logo">
+                                <span class="team-name">${player.takim.isim}</span>
+                            </td>
+                            <td data-label="Kurtarış" class="stat-value">${player.kurtaris}</td>
+                        `;
+                        statsBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Kurtarış sayıları verileri yüklenirken bir hata oluştu:', error);
+                    statsBody.innerHTML = '<tr><td colspan="4">Kurtarış sayıları yüklenemedi. Lütfen daha sonra tekrar deneyin.</td></tr>';
+                });
+        });
+    </script>
 </body>
 </html>
